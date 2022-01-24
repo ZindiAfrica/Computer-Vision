@@ -1,0 +1,17 @@
+numpy
+scipy
+Pillow
+cython
+matplotlib
+scikit-image
+tensorflow-gpu==1.15.0
+keras===2.1.6
+opencv-python
+h5py
+imgaug
+IPython[all]
+tqdm==4.19.9
+jupyter-client==5.3.4
+jupyter-core==4.6.1
+pandas
+pickle-mixin

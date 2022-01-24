@@ -1,0 +1,15 @@
+__pycache__
+
+.DS_Store
+
+.idea/
+
+*.csv
+*.npy
+*.filenames
+*.predictions
+*.index
+*.meta
+*.data-00000-of-00001
+
+CGIAR/tf_records/CGIAR_test-00000-of-00001
