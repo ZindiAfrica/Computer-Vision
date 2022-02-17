@@ -1,0 +1,30 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+mypy = "*"
+
+[packages]
+torch = "==1.6.0"
+pandas = "*"
+numpy = "*"
+scikit-learn = "*"
+lightgbm = "*"
+pytorch-lightning = "==0.9.0"
+cnn-finetune = "==0.6.0"
+efficientnet-pytorch = "==0.7.0"
+opencv-python-headless = "*"
+torchvision = "*"
+torchnet = "*"
+notebook = "*"
+ipywidgets = "*"
+matplotlib = "*"
+hydra-core = "*"
+tensorboard = "*"
+ttach = "*"
+albumentations = "*"
+
+[requires]
+python_version = "3.6"
