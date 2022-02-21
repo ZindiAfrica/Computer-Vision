@@ -1,0 +1,14 @@
+1 pip install torch 
+2 pip install tqdm 
+  pip install catboost 
+
+3 run ./create_folders.sh
+4 put the unziped tif data per folder (00,01,02,03)  in fodler called  data under data/raw_data/
+	those path for each tile should be in those path  
+			data/raw_data/data/00/
+			data/raw_data/data/01/
+			data/raw_data/data/02/
+			data/raw_data/data/03/
+change absolut_path="/workspace/Zindi/ICLR_2" in config.py   with  the absolut path  to the ICLR_2  folder in your machine 
+5 run  ./run.sh 
+
