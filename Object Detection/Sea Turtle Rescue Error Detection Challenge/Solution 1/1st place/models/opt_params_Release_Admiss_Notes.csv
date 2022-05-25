@@ -1,0 +1,2 @@
+nrounds,max_depth,eta,gamma,colsample_bytree,min_child_weight,subsample,nthread
+95,6,0.05,1.9292900185419306,0.6965163633706167,0.2735737986260808,0.5570607426132173,4
