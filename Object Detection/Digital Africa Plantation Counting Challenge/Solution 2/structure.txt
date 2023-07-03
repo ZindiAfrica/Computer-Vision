@@ -1,0 +1,53 @@
+.
+|-- README.MD
+|-- checkpoints
+|   |-- checkpoint.txt
+|   |-- tf_efficientnetv2_l
+|   |-- tf_efficientnetv2_l_in21k
+|   |-- tf_efficientnetv2_m
+|   |-- tf_efficientnetv2_m_in21ft1k
+|   |-- tf_efficientnetv2_m_in21k
+|   `-- tf_efficientnetv2_s
+|-- logs
+|   |-- tf_efficientnetv2_l_imgsz_512_bs_16_eps_16.log
+|   |-- tf_efficientnetv2_l_in21k_imgsz_512_bs_16_eps_16.log
+|   |-- tf_efficientnetv2_m_imgsz_512_bs_16_eps_16.log
+|   |-- tf_efficientnetv2_m_in21ft1k_imgsz_512_bs_16_eps_16.log
+|   |-- tf_efficientnetv2_m_in21k_imgsz_512_bs_16_eps_16.log
+|   `-- tf_efficientnetv2_s_imgsz_512_bs_16_eps_16.log
+|-- configs
+|   |-- tf_efficientnetv2_l.yaml
+|   |-- tf_efficientnetv2_l_in21k.yaml
+|   |-- tf_efficientnetv2_m.yaml
+|   |-- tf_efficientnetv2_m_in21ft1k.yaml
+|   |-- tf_efficientnetv2_m_in21k.yaml
+|   `-- tf_efficientnetv2_s.yaml
+|-- dataset
+|   |-- SampleSubmission.csv
+|   |-- Test.csv
+|   |-- Train.csv
+|   |-- TreeImages
+|   `-- TreeImages.zip
+|-- results
+|   |-- tf_efficientnetv2_l_ensemble_5folds.csv
+|   |-- tf_efficientnetv2_l_in21k_ensemble_5folds.csv
+|   |-- tf_efficientnetv2_m_ensemble_5folds.csv
+|   |-- tf_efficientnetv2_m_in21ft1k_ensemble_5folds.csv
+|   |-- tf_efficientnetv2_m_in21k_ensemble_5folds.csv
+|   `-- tf_efficientnetv2_s_ensemble_5folds.csv
+|-- augment.py
+|-- dataset.py
+|-- ensemble_all.py
+|-- environment.yml
+|-- fold.py
+|-- infer_ensemble_fold.py
+|-- infer_single_fold.py
+|-- model.py
+|-- scripts
+|   |-- infer.sh
+|   `-- train.sh
+|-- submission
+|   `-- submission_ensemble_final.csv
+|-- train.py
+|-- trainer.py
+
