@@ -1,0 +1,25 @@
+model: swin_large_patch4_window12_384
+batch_size: 8
+image_size: 384
+seed: 42
+pretrained: false
+num_workers: 10
+
+pin_memory: true
+
+train_dir: /home/mithil/PycharmProjects/Rice/data/images
+train_file_path: /home/mithil/PycharmProjects/Rice/data/train.csv
+in_channels: 3
+
+target_size: 3
+device: cuda
+model_dir: /home/mithil/PycharmProjects/Rice/models/log_loss/swin_large_patch4_window12_384_pseudo_25_epoch
+n_fold: 5
+oof_file_path: /home/mithil/PycharmProjects/Rice/oof/swin_large_patch4_window12_384_pseudo_25_epoch_tta.csv
+oof_probablity_path: /home/mithil/PycharmProjects/Rice/oof/swin_large_patch4_window12_384_pseudo_25_epoch_tta.npy
+folds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4

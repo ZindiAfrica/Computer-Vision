@@ -1,0 +1,12 @@
+Accuracy:
+  params:
+    average: micro
+    num_classes: 2
+
+AUROC:
+  params:
+    num_classes: 2
+
+MeanSquaredError:
+  params:
+    squared: true

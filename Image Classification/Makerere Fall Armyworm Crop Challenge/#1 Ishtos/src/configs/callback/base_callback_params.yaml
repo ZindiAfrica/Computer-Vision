@@ -1,0 +1,35 @@
+lr_monitor:
+  enable: true
+  log_momentum: false
+
+early_stopping:
+  enable: false
+  monitor: val_loss
+  patience: 10
+  verbose: false
+  mode: min
+  strict: true
+  check_finite: true
+  check_on_train_epoch_end: false
+
+model_loss_checkpoint:
+  enable: true
+  dirpath: checkpoints/loss
+  filename: fold
+  monitor: val_loss
+  verbose: false
+  save_last: false
+  save_top_k: 1
+  mode: min
+  save_weights_only: true
+
+model_score_checkpoint:
+  enable: true
+  dirpath: checkpoints/score
+  filename: fold
+  monitor: val_score
+  verbose: false
+  save_last: false
+  save_top_k: 1
+  mode: max
+  save_weights_only: true

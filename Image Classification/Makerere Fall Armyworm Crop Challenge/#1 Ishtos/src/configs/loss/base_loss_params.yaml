@@ -1,0 +1,41 @@
+BCEWithLogitsLoss:
+  params:
+    reduction: mean
+
+CrossEntropyLoss:
+  params:
+    reduction: mean
+
+FocalLoss:
+  params:
+    alpha: 1
+    gamma: 2
+    reduction: mean
+    eps: 1e-7
+
+L1Loss:
+  params:
+    reduction: mean
+
+MSELoss:
+  params:
+    reduction: mean
+
+NLLLoss:
+  params:
+    reduction: mean
+
+OUSMLoss:
+  params:
+    base_loss_name: RMSELoss
+    base_reduction: mean
+    k: 1 # number of drop samples
+    trigger: 10 # epoch to enable OUSM
+
+RMSELoss:
+  params:
+    reduction: mean
+
+SmoothL1Loss:
+  params:
+    reduction: mean

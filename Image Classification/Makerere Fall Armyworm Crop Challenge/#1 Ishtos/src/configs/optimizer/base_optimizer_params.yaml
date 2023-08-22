@@ -1,0 +1,29 @@
+Adam:
+  params:
+    lr: 5e-5
+    betas: [0.9, 0.999]
+    eps: 1e-8
+    weight_decay: 0
+    #  amsgrad: false
+
+AdamW:
+  params:
+    lr: 1e-5
+    betas: [0.9, 0.999]
+    eps: 1e-8
+    weight_decay: 1e-8
+    # amsgrad: false
+
+MADGRAD:
+  params:
+    lr: 1e-3
+    eps: 1e-8
+
+SAM:
+  params:
+    base_optimizer: Adam
+
+SGD:
+  params:
+    lr: 1e-3
+    momentum: 0.9

@@ -1,0 +1,23 @@
+model: swinv2_base_window12to24_192to384_22kft1k
+batch_size: 16
+image_size: 384
+seed: 42
+pretrained: false
+num_workers: 10
+
+pin_memory: true
+
+train_dir: /home/mithil/PycharmProjects/Rice/data/paddy-disease-classification/train_images/all_images
+train_file_path: /home/mithil/PycharmProjects/Rice/data/paddy-disease-classification/train_done.csv
+in_channels: 3
+
+target_size: 3
+device: cuda
+model_path: /home/mithil/PycharmProjects/Rice/models/log_loss/swinv2_base_window12to24_192to384_22kft1k_cutout
+n_fold: 5
+folds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
