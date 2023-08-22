@@ -51,6 +51,10 @@ Zindi has hosted some challenges based on Computer vision.
 
 11. [Task Mate Kenyan Sign Language Classification Challenge](https://github.com/ZindiAfrica/Computer-Vision/tree/main/Image%20Classification/Task%20Mate%20Kenyan%20Sign%20Language%20Classification%20Challenge)
 
+12. [Makerere Passion Fruit Disease Detection Challenge](https://github.com/ZindiAfrica/Computer-Vision/tree/main/Image%20Classification/Makerere%20Fall%20Armyworm%20Crop%20Challenge)
+
+13. [Microsoft Rice Disease Classification Challenge](https://github.com/ZindiAfrica/Computer-Vision/tree/main/Image%20Classification/Microsoft%20Rice%20Disease%20Classification%20Challenge)
+
 
 ## Object Classification
 
