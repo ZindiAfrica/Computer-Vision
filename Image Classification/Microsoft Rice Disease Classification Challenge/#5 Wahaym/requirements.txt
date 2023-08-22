@@ -1,0 +1,8 @@
+albumentations==1.2.0
+numpy==1.23.0
+pandas==1.4.3
+pytorch_lightning==1.6.4
+PyYAML==6.0
+scikit_learn==1.1.2
+timm==0.6.8
+torch==1.10.2

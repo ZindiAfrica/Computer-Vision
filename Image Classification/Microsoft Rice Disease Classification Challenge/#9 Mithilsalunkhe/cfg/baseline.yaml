@@ -1,0 +1,36 @@
+model: swin_large_patch4_window12_384
+batch_size: 4
+image_size: 384
+seed: 42
+pretrained: true
+num_workers: 2
+pin_memory: true
+train_dir: /content/images/
+train_file_path: /content/train.csv
+epochs: 25
+in_channels: 3
+folds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+
+scheduler_name: CosineAnnealingWarmRestarts
+optimizer: Adam
+T_0: 5
+T_max: 5
+T_mult: 1
+min_lr: 1e-7
+max_lr: 1e-3
+weight_decay: 1e-6
+target_size: 3
+device: cuda
+model_dir: swin_large_patch4_window12_384_pseudo_25_epoch
+n_fold: 5
+mixup: True
+mixup_alpha: 1.0
+pseudo_file_path: /content/RiceClassification/submission/swin_large_25_epoch_tta.csv
+optimizer_args:
+  lr: 1.0E-5
+

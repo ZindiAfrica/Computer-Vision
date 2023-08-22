@@ -1,0 +1,37 @@
+batch_size: 32
+lr_backbone: 1.6e-5
+lr_head: 1.6e-5
+image_size:
+- 384
+- 384
+max_epochs: 30
+grad_checkpointing: true
+gradient_accumulation_steps: 1
+backbone: deit3_base_patch16_384_in21ft1k
+out_indices:
+- 3
+- 4
+n_splits: 5
+pseudo_label: 
+pseudo_conf_threshold:
+aug:
+  rotate: 15
+  translate: 0.25
+  shear: 3
+  p_affine: 0.5
+  crop_scale: 0.9
+  crop_l: 0.75
+  crop_r: 1.3333333333333333
+  p_gray: 0.1
+  p_blur: 0.2
+  p_noise: 0.05
+  p_downscale: 0.0
+  p_clahe: 0
+  p_rgb_shift: 0
+  p_shuffle: 0.3
+  p_posterize: 0.3
+  p_bright_contrast: 0.5
+  p_cutout: 0.4
+  p_snow: 0.1
+  p_rain: 0.05
+

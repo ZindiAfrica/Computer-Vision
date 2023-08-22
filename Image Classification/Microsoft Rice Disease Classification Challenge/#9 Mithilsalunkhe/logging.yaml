@@ -1,0 +1,220 @@
+convnext_small_384_no_aug:
+  score:
+    cv: 0.097219
+    lb: 0.131418
+
+  notes: "Baseline Model , nothing special"
+
+  cfg:
+    model: convnext_small_384_in22ft1k
+    batch_size: 8
+    image_size: 384
+    seed: 42
+    pretrained: true
+    epochs: 15
+    in_channels: 3
+    folds:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+    scheduler_name: CosineAnnealingWarmRestarts
+    optimizer: Adam
+    T_0: 5
+    T_max: 5
+    T_mult: 1
+    min_lr: 1e-7
+    max_lr: 1e-3
+    weight_decay: 1e-6
+    target_size: 3
+    n_fold: 5
+    optimizer_args:
+      lr: 1.0E-5
+    Augs:
+      "A.RandomResizedCrop(height=DIM, width=DIM),
+             A.HorizontalFlip(),
+             A.VerticalFlip()"
+  files:
+    model_dir: "/home/mithil/PycharmProjects/Rice/models/log_loss/convnext_small_384_image_size"
+
+    inference_file: /home/mithil/PycharmProjects/Rice/submission/convnext_small_384_image_size.csv
+    oof_file: /home/mithil/PycharmProjects/Rice/oof/convnext_small_384_image_size_oof.csv
+convnext_small_512_image_size_no_aug:
+  score:
+    cv: 0.093706876039505
+    tta_cv: 0.0929960235953331
+    lb: 0.1309931938567894
+    tta_lb: 0.1264960264194152
+
+
+  notes: "Baseline Model With 512 image size"
+
+  cfg:
+    model: convnext_small_384_in22ft1k
+    batch_size: 8
+    image_size: 512
+    seed: 42
+    pretrained: true
+    epochs: 15
+    in_channels: 3
+    folds:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+    scheduler_name: CosineAnnealingWarmRestarts
+    optimizer: Adam
+    T_0: 5
+    T_max: 5
+    T_mult: 1
+    min_lr: 1e-7
+    max_lr: 1e-3
+    weight_decay: 1e-6
+    target_size: 3
+    n_fold: 5
+    optimizer_args:
+      lr: 1.0E-5
+    Augs:
+      "A.RandomResizedCrop(height=DIM, width=DIM),
+           A.HorizontalFlip(),
+           A.VerticalFlip()"
+    tta: tta.aliases.flip_transform()
+  files:
+    model_dir: "/home/mithil/PycharmProjects/Rice/models/log_loss/convnext_small_512_image_size_no_aug"
+
+    inference_file: /home/mithil/PycharmProjects/Rice/logging.yaml
+    oof_file: /home/mithil/PycharmProjects/Rice/oof/convnext_small_512_image_size_no_aug_oof.csv
+convnext_small_384_in22ft1k_512_cutmix:
+  score:
+    cv_tta: 0.11421280354261398
+    lb_tta: 0.157684108768552
+  cfg:
+    model: convnext_small_384_in22ft1k
+    batch_size: 8
+    image_size: 512
+    seed: 42
+    pretrained: true
+    epochs: 15
+    in_channels: 3
+    folds:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+    scheduler_name: CosineAnnealingWarmRestarts
+    optimizer: Adam
+    T_0: 5
+    T_max: 5
+    T_mult: 1
+    min_lr: 1e-7
+    max_lr: 1e-3
+    weight_decay: 1e-6
+    target_size: 3
+    n_fold: 5
+    optimizer_args:
+      lr: 1.0E-5
+    Augs:
+      "A.RandomResizedCrop(height=DIM, width=DIM),
+             A.HorizontalFlip(),
+             A.VerticalFlip()"
+    tta: tta.aliases.flip_transform()
+swinv2_base_window12to24_192to384_22kft1k:
+  score:
+    cv_tta: 0.08863433450460434,1.438795566558838
+    lb_tta: 0.1029713086908735
+
+  cfg:
+    model: swinv2_base_window12to24_192to384_22kft1k
+    batch_size: 8
+    image_size: 384
+    seed: 42
+    pretrained: true
+    epochs: 15
+    in_channels: 3
+    folds:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+    scheduler_name: CosineAnnealingWarmRestarts
+    optimizer: Adam
+    T_0: 5
+    T_max: 5
+    T_mult: 1
+    min_lr: 1e-7
+    max_lr: 1e-3
+    weight_decay: 1e-6
+    target_size: 3
+    n_fold: 5
+    optimizer_args:
+      lr: 1.0E-5
+    Augs:
+      "A.RandomResizedCrop(height=DIM, width=DIM),
+               A.HorizontalFlip(),
+               A.VerticalFlip()"
+    tta: tta.aliases.flip_transform()
+swin_large_patch4_window12_384:
+  score:
+    cv_tta: 0.08526156097650528,1.3951977491378784
+    lb_tta: 0.09057395039155558
+swinv2_large_window12to24_192to384_22kft1k:
+  score:
+    cv_tta: 0.07907352596521378
+    lb_tta: 0.08653677970925176
+swinv2_base_window12to24_192to384_22kft1k_pseudo:
+  score:
+    cv_tta: 1.3736261129379272
+
+
+
+swinv2_base_window12to24_192to384_22kft1k_cutout:
+  score:
+    cv_tta: 0.07907353341579437
+    lb_tta: 0.09639893062006431
+
+
+
+swinv2_base_window12to24_192to384_22kft1k_mixup_only:
+  score:
+    cv_tta: 0.07751593738794327
+
+    lb_tta: 0.08624396217065304
+  epochs: 25
+swinv2_base_window12to24_192to384_22kft1k_mixup_cutout:
+  score:
+    cv_tta: 0.08040450513362885
+  epochs: 25
+swinv2_large_window12to24_192to384_22kft1k_mixup_25_epoch:
+  score:
+    cv_tta: 0.07485413551330566
+
+    lb_tta: 0.08371530242131507
+
+  epoch: 25
+  Augment: Cutmix
+swin_v2_base_25_epoch_no_mixup:
+  score:
+    cv_tta: 0.07181371003389359
+    lb_tta: 0.0852622391383722
+swinv2_base_window12to24_192to384_22kft1k_25_epoch_delayed_mixup:
+  score:
+    cv_tta: 0.07529262453317642
+    lb_tta: 0.08195057830951497
+swin_large_25_epoch:
+  score:
+    cv_tta: 0.07529262453317642
+    lb_tta: 0.0666001914919875
+swinv2_large_window12to24_192to384_22kft1k_25_epoch:
+  score:
+    cv_tta: Loss 0.06936729699373245
+    lb_tta:
+convnext_large_25_epoch:
+  score:
+    cv_tta: Loss 0.08609747141599655
+swinv2_large_window12to24_192to384_22kft1k_pseudo_25_epoch:
+  score:
+    cv_tta: Loss 0.04777972772717476

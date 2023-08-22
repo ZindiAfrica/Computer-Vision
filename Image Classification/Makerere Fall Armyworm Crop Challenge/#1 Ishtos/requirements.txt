@@ -1,0 +1,18 @@
+albumentations==1.2.0
+grad-cam
+hydra-core
+matplotlib
+numpy
+opencv-python
+pandas
+pre-commit
+pytorch-lightning
+scikit-learn
+timm
+# torch
+# torchaudio
+# torchvision
+tqdm
+transformers
+wandb
+warmup_scheduler

@@ -1,0 +1,106 @@
+defaults:
+  - _self_
+  - callback: base_callback_params
+  - optimizer: base_optimizer_params
+  - scheduler: base_scheduler_params
+  - loss: base_loss_params
+  - metric: base_metric_params
+
+general:
+  debug: false
+  seed: 42
+  exp_dir: ./outputs
+
+train:
+  mixup:
+    enable: false
+    alpha: 1
+    duration: 0
+    p: 0.5
+
+logger:
+  csv_logger:
+    enable: true
+    save_dir: logs
+    name: csv_logger
+    version: fold
+
+  wandb_logger:
+    enable: true
+    entity: ishtos
+    save_dir: .
+    name: fold
+    offline: false
+    project: makerere-fall-armyworm-crop-challenge
+    log_model: all # ['all', true, false]
+    group: exp_003
+
+trainer:
+  accumulate_grad_batches: 1
+  amp_backend: native
+  benchmark: false
+  deteministic: true
+  gpus: 1
+  gradient_clip_val: 0
+  gradient_clip_algorithm: norm
+  precision: 16
+  max_epochs: 10 # schduler
+  resume_from_checkpoint: None
+  stochastic_weight_avg: false
+
+preprocess:
+  base_dir: ../../data
+  image_dir: image
+  test_image_dir: image
+  train_csv: csv/train.csv
+  test_csv: csv/test.csv
+  fold:
+    name: StratifiedKFold
+    n_splits: 5
+    group: group # For GroupKFold
+
+dataset:
+  train_csv: train.csv
+  test_csv: test.csv
+  id: Image_id
+  target: Label
+  store_train: true
+  store_valid: true
+  grayscale: false
+  gradcam: false
+  loader:
+    batch_size: 8
+    num_workers: 8
+
+transforms:
+  train_version: v2
+  valid_version: v1
+  params:
+    height: 384
+    width: 384
+    p: 0.5
+
+model:
+  name: net
+  params:
+    base_model: swin_base_patch4_window12_384
+    pretrained: true
+    checkpoint_path:
+    num_classes: 2
+    neck_version:
+    head_version: v1
+
+optimizer:
+  name: AdamW
+
+scheduler:
+  name: CosineAnnealingWarmRestarts
+  interval: step # [step, epoch]
+  monitor: val_loss # [val_loss, val_score]
+
+loss:
+  names: ["CrossEntropyLoss"]
+  weights: [1]
+
+metric:
+  names: ["AUROC"]
