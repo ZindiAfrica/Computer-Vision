@@ -75,3 +75,14 @@ The Mean Absolute Error will be used to evaluate the accuracy of your prediction
 At the end of the year, LOC staff review each rescue/field to compare the database entry with the hand-written log book to ensure the integrity of the data.
 
 The Solutions will help LOC reduce the amount of time and effort needed for the review process.
+
+[![CC BY 4.0][cc-by-shield]][cc-by]
+
+This work is licensed under a
+[Creative Commons Attribution 4.0 International License][cc-by].
+
+[![CC BY 4.0][cc-by-image]][cc-by]
+
+[cc-by]: http://creativecommons.org/licenses/by/4.0/
+[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
+[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
