@@ -71,3 +71,15 @@ The top three data scientists will be eligible for an interview for the opportun
 The solutions would have many applications. The soluions will be able to quickly annotate vast numbers of metagenomic sequences.
 
 Solutions developed in the course of this challenge may contribute to furthering the understanding of the world around us.
+
+
+[![CC BY 4.0][cc-by-shield]][cc-by]
+
+This work is licensed under a
+[Creative Commons Attribution 4.0 International License][cc-by].
+
+[![CC BY 4.0][cc-by-image]][cc-by]
+
+[cc-by]: http://creativecommons.org/licenses/by/4.0/
+[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
+[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
